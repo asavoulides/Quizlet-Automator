@@ -8,7 +8,7 @@ import os
 
 
 def GPT4Req(msg):
-    openai.api_key = "YOUR API KEY"  # Replace with your actual API key
+    openai.api_key = "OPENAI Api Key"  # Replace with your actual API key
     response = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",
         messages=[{"role": "user", "content": msg}],
