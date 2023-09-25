@@ -116,7 +116,7 @@ class OCRApp:
         c = self.text_entry.get("1.0", tk.END).strip()
 
         prompt = f""" 
-        lets play a game where I will give you a list of both {a} and {b} and you will return the same list except you will add a comma between the spanish and english.
+        lets play a game where I will give you a list of both {a} and {b} and you will return the same list except you will add a comma between  {a} and {b}.
 
         For example if the list contained Spanish and English, I would give you
         "Hola Hello"
