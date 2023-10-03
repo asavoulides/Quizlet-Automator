@@ -11,7 +11,7 @@ import numpy as np
 class OCRApp:
     def __init__(self, root):
         self.root = root
-        self.root.title("GPT-4 Request with OCR")
+        self.root.title("OCR Text Formatter v1.0")
 
         self.frame = ttk.Frame(self.root, padding="10")
         self.frame.grid(row=0, column=0, sticky=(tk.W, tk.E, tk.N, tk.S))
@@ -116,7 +116,7 @@ class OCRApp:
         c = self.text_entry.get("1.0", tk.END).strip()
 
         prompt = f""" 
-        lets play a game where I will give you a list of both {a} and {b} and you will return the same list except you will add a comma between  {a} and {b}.
+        lets play a game where I will give you a list of both {a} and {b} and you will return the same list except you will add a comma between the {a} and {b}.
 
         For example if the list contained Spanish and English, I would give you
         "Hola Hello"
@@ -129,7 +129,7 @@ class OCRApp:
         """
 
         result = GPT4Req(prompt)
-        self.result_label.config(text=f"Result: \n {result}")
+        self.result_label.config(text=f"Result: \n{result}")
         self.progress_bar.stop()
         self.progress_bar.grid_remove()
 
@@ -141,7 +141,7 @@ class OCRApp:
 
 
 def GPT4Req(msg):
-    openai.api_key = "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"
+    openai.api_key = "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"
     response = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",
         messages=[{"role": "user", "content": msg}],
